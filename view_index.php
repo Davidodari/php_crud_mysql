@@ -13,7 +13,6 @@ if ($query) {
            echo "<hr/><h4 style='text-align:center;background-color:#ffb366;'>Nothing In Table</h4>";
       }
       else{
-
            echo "<h4 style='text-align:center;color:#ff4dd2'>List Of Items</h4>";
            //loop through row by row-set data from each respective column
            while ($column = mysqli_fetch_assoc($query)) {
@@ -22,7 +21,6 @@ if ($query) {
            $item_description=$column['DESCRIPTION'];
            $item_name=$column['NAME'];
            $item_id_db=$column['ID_DB'];
-
           //display each item
           echo '<p style="word-spacing:3px;letter-spacing:3px;text-indent:20px;padding:10px;text-align:center;">'.$item_id_db.'. Item is/are <i>'.$item_name.'</i>.<br/><strong>Item Id</strong> - '.$item_id.'<br/><strong>Description::</strong>'.$item_description.'<br/><strong>Item Value::</strong>'.$item_value.'Ksh.<br/><p/>';
       }
